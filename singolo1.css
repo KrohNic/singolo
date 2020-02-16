@@ -16,25 +16,24 @@
 }
 
 .header-logo {
-  margin-left: 41px;
-  font-size: 12.5px;
+  margin-left: 40px;
+  font-size: 12.7px;
   line-height: 88px;
-  letter-spacing: -0.9px;
+  letter-spacing: -0.8px;
   font-family: "Lato-Semibold";
 }
 
 .header-logo-red_star {
   color: #f06c64;
-  margin-left: -4px;
+  margin-left: -6.7px;
 }
 
 .header_nav {
-  margin-right: 38px;
+  margin-right: 40px;
   margin-top: 42px;
   display: flex;
-  font-family: "Lato-Thin";
+  font-family: "Lato-Bold";
   font-size: 11.7px;
-  letter-spacing: 0.2px;
   font-weight: 700;
 }
 
