@@ -20,7 +20,7 @@
   font-size: 12.5px;
   line-height: 88px;
   letter-spacing: -0.9px;
-  font-family: "Lato";
+  font-family: "Lato-Semibold";
 }
 
 .header-logo-red_star {
@@ -63,6 +63,7 @@
 .slider {
   width: 100%;
   height: 594px;
+  margin-bottom: 6px;
   position: relative;
   background-color: #f06c64;
   box-shadow: 0px 6px 0px 0px #ea676b;
@@ -135,7 +136,7 @@
 .phone_v-body,
 .phone_h-body {
   position: absolute;
-  background-image: url("./assets/phone.svg");
+  background-image: url("./assets/phone-body.svg");
 }
 
 .phone_v-body {
@@ -171,4 +172,105 @@
   top: -4px;
   left: -1px;
   background-image: url("./assets/phone_h_screen.png");
+}
+
+.services {
+  height: calc(494px - 68px);
+  padding: 68px 0 0 40px;
+  margin-bottom: 6px;
+  background-color: #f2f2f2;
+  box-shadow: 0px 6px 0px 0px white;
+}
+
+.services-title {
+  font-family: "Lato-Black";
+  font-size: 30px;
+  letter-spacing: -0.2px;
+  color: #666d89;
+  font-weight: 900;
+  line-height: 18px;
+}
+
+.services-text {
+  margin-top: 27px;
+  margin-right: 40px;
+  font-family: "Lato-Light";
+  font-size: 18px;
+  color: #767e9e;
+  font-weight: 300;
+  text-align: justify;
+  line-height: 30px;
+}
+
+.services-badges {
+  margin-top: 45px;
+  margin-left: 1px;
+  display: grid;
+  grid-template-columns: repeat(3, 303px);
+  grid-column-gap: 16px;
+  grid-row-gap: 32px;
+}
+
+.badge {
+  display: grid;
+  grid-template-columns: 59px 221px;
+  grid-template-rows: 28px;
+  grid-column-gap: 21px;
+}
+
+.badge-icon {
+  width: 55px;
+  height: 55px;
+  margin-top: 2px;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  border: 2px solid #666d89;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.badge-title {
+  font-family: "Lato-Black";
+  font-size: 18px;
+  color: #666d89;
+  font-weight: 900;
+  text-align: left;
+  line-height: 18px;
+}
+
+.badge-text {
+  font-size: 12.1px;
+  color: #767e9e;
+  font-family: "Lato-Regular";
+  font-weight: 400;
+  text-align: justify;
+  line-height: 21px;
+  overflow: hidden;
+}
+
+.pen {
+  background-image: url("./assets/pen.svg");
+  background-position: calc(50% + 1px) calc(50% + 1px);
+}
+
+.bulb {
+  background-image: url("./assets/bulb.svg");
+}
+
+.heart {
+  background-image: url("./assets/heart.svg");
+}
+
+.phone {
+  background-image: url("./assets/phone.svg");
+}
+
+.bubble {
+  background-image: url("./assets/bubble.svg");
+  background-position: calc(50% + 1px) calc(50% + 1px);
+}
+
+.star {
+  background-image: url("./assets/star.svg");
 }
