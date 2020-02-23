@@ -28,35 +28,47 @@
   margin-left: -6.7px;
 }
 
-.header_nav {
+.nav {
   margin-right: 40px;
   margin-top: 42px;
-  display: flex;
   font-family: "Lato-Bold";
   font-size: 11.7px;
   font-weight: 700;
 }
 
-.header_nav-item-dot {
-  width: 30px;
-  text-align: center;
+.nav_item {
+  display: inline;
+  margin-left: 28px;
+  position: relative;
+}
+
+.nav_item::before {
+  content: "·";
   opacity: 0.2;
+  text-align: center;
+  width: 28px;
+  position: absolute;
+  left: -28px;
 }
 
-.header_nav-item-current {
+.nav_item:first::after {
+  content: "";
+}
+
+.nav_item:hover {
   color: #f06c64;
-  text-decoration: none;
-  cursor: default;
 }
 
-.header_nav-item {
+.nav_item-a {
   color: white;
   text-decoration: none;
   cursor: pointer;
 }
 
-.header_nav-item:hover {
+.nav_item_current-a {
   color: #f06c64;
+  text-decoration: none;
+  cursor: default;
 }
 
 .slider {
