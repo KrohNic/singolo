@@ -185,6 +185,10 @@
   height: 300px;
 }
 
+.profile--second_img {
+  margin-left: -1px;
+}
+
 .profile--name {
   width: 300px;
   margin-top: 13px;
@@ -213,6 +217,10 @@
 .profile--links {
   margin-top: 24px;
   display: flex;
+}
+
+.first_links {
+  margin-left: 1px;
 }
 
 .ico_border {
