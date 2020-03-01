@@ -41,7 +41,6 @@
 .portfolio--nav_ul {
   margin-top: 11px;
   padding-left: 1px;
-  color: #767e9e;
 }
 
 .portfolio--nav_li,
@@ -50,6 +49,7 @@
   margin-right: 5.9px;
   border: 1px solid #666d89;
   border-radius: 5px;
+  color: #767e9e;
   font-size: 12px;
   line-height: 20px;
   font-family: "Lato-Regular", Arial, sans-serif;
