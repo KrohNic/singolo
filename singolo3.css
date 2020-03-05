@@ -1,0 +1,11 @@
+@import "./fonts.css";
+
+* {
+  margin: 0;
+}
+
+.wrapper {
+  width: 1020px;
+  margin: 0 auto;
+  position: relative;
+}
