@@ -9,3 +9,235 @@
   margin: 0 auto;
   position: relative;
 }
+
+.getaquote {
+  background-color: #f06c64;
+}
+
+.getaquote--padding {
+  padding: 67px 40px 13px;
+}
+
+.getaquote--title {
+  margin-bottom: 26px;
+  line-height: 20px;
+  font-size: 30px;
+  font-family: "Lato-Black", Arial, sans-serif;
+  letter-spacing: -0.2px;
+  color: #f0d8d9;
+}
+
+.getaquote--text {
+  line-height: 30px;
+  font-size: 18px;
+  font-family: "Lato-Light", Arial, sans-serif;
+  color: #f0d8d9;
+  text-align: justify;
+}
+
+.getaquote--twocol {
+  margin-top: 44px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 21px;
+}
+
+.form {
+  width: 619px;
+  height: 418px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+.form--text_input,
+.form--text_area,
+.form--button {
+  padding: 10px 14.6px 14px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 5px;
+  background-color: #d6564f;
+  font-size: 14px;
+  font-family: "Lato-Light", Arial, sans-serif;
+  color: #f0d8d9;
+  outline: none;
+}
+
+.form--text_input::placeholder,
+.form--text_area::placeholder {
+  font-family: "Lato-Regular", Arial, sans-serif;
+  font-size: 12px;
+  color: rgba(244, 140, 143, 255);
+}
+
+.form--text_input:invalid,
+.form--text_area:invalid {
+  box-shadow: 0 0 4px 2px #ff0000bb;
+}
+
+.form--text_input,
+.form--button {
+  height: 38px;
+}
+
+.form--text_area {
+  height: 202px;
+  resize: none;
+}
+
+.form--button {
+  font-family: "Lato-Black", Arial, sans-serif;
+  background-color: #f0d8d9;
+  color: #000000;
+}
+
+.form--button:hover {
+  background-color: #f0b8ba;
+  cursor: pointer;
+}
+
+.form--button:active {
+  background-color: #f0868a;
+}
+
+.contact_info--title {
+  margin-bottom: 9px;
+  line-height: 19px;
+  font-size: 18px;
+  letter-spacing: -0.1px;
+  color: #f0d8d9;
+  font-family: "Lato-Black", Arial, sans-serif;
+}
+
+.contact_info--text {
+  margin-left: -0.4px;
+  font-size: 12px;
+  line-height: 22px;
+  color: #f0d8d9;
+  letter-spacing: -0.1px;
+  font-family: "Lato-Regular", Arial, sans-serif;
+  text-align: justify;
+}
+
+.contacts_list {
+  margin-top: 19px;
+  padding: 0;
+  color: #f0d8d9;
+  list-style-type: none;
+}
+
+.contacts_list--li {
+  display: flex;
+  font-size: 12px;
+  line-height: 22px;
+  font-family: "Lato-Regular", Arial, sans-serif;
+  letter-spacing: -0.1px;
+}
+
+.contacts_list--a {
+  display: flex;
+  color: inherit;
+  text-decoration: none;
+}
+
+.contacts_list--span {
+  margin-left: 10px;
+}
+
+.contacts_list--ico-map,
+.contacts_list--ico-tel,
+.contacts_list--ico-mail {
+  width: 13px;
+  height: 20px;
+  background-position-x: 50%;
+  background-repeat: no-repeat;
+}
+
+.contacts_list--ico-map {
+  background-image: url("./assets/contact_info/location.png");
+  background-position-y: calc(50% + 1px);
+}
+
+.contacts_list--ico-tel {
+  background-image: url("./assets/contact_info/phone.png");
+  background-position-y: 50%;
+}
+
+.contacts_list--ico-mail {
+  background-image: url("./assets/contact_info/mail.png");
+  background-position-y: calc(50% + 2px);
+}
+
+.getaquote--stripe {
+  width: 100%;
+  height: 6px;
+  background-color: #ea676b;
+}
+
+.footer {
+  padding: 22px 32px 22px 42px;
+  background-color: #2d303a;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.footer--copyright {
+  margin-top: 6px;
+  color: #666d89;
+  font-family: "Lato-Regular", Arial, sans-serif;
+  line-height: 20px;
+  font-size: 12px;
+  letter-spacing: -0.2px;
+}
+
+.footer--social_links {
+  width: 160px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.ico_border {
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  display: table;
+  border: 1.4px solid #69708b;
+  border-radius: 50%;
+}
+
+.ico_border:hover {
+  border-color: #000000;
+}
+
+.ico {
+  width: 100%;
+  height: inherit;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border-radius: 50%;
+}
+
+.ico:hover {
+  opacity: 1;
+  background-color: #000000;
+}
+
+.facebook_ico {
+  background-image: url("./assets/social_media/facebook.png");
+}
+
+.google_ico {
+  background-image: url("./assets/social_media/google.png");
+}
+
+.twitter_ico {
+  background-image: url("./assets/social_media/twitter.png");
+}
+
+.linkedin_ico {
+  background-image: url("./assets/social_media/linkedin.png");
+}
