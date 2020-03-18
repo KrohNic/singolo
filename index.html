@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
@@ -16,20 +16,20 @@
         </div>
         <nav class="nav">
           <ul>
-            <li class="nav_item">
-              <a class="nav_item--a nav_item--a-current" href="#home">HOME</a>
+            <li class="nav_item nav_item--current">
+              HOME
             </li>
             <li class="nav_item">
-              <a class="nav_item--a" href="#services">SERVICES</a>
+              SERVICES
             </li>
             <li class="nav_item">
-              <a class="nav_item--a" href="#portfolio">PORTFOLIO</a>
+              PORTFOLIO
             </li>
             <li class="nav_item">
-              <a class="nav_item--a" href="#about">ABOUT</a>
+              ABOUT
             </li>
             <li class="nav_item">
-              <a class="nav_item--a" href="#contact">CONTACT</a>
+              CONTACT
             </li>
           </ul>
         </nav>
@@ -37,28 +37,31 @@
       <div class="header--stripe"></div>
     </header>
     <main>
-      <article class="slider--block">
-        <a id="home"></a>
-        <div class="slider  wrapper">
-          <div class="slider-controls">
+      <article id="home" class="slider--block">
+        <div class="slider">
+          <div class="slider-controls  wrapper">
             <div class="slider-controls-left"></div>
             <div class="slider-controls-right"></div>
           </div>
-          <div class="slider--slide1 slider--active">
-            <div class="phone_v">
-              <div class="phone_v--shadow"></div>
-              <div class="phone_v--body"></div>
-              <div class="phone_v--screen"></div>
-              <div class="phone--button phone_v--button"></div>
-            </div>
-            <div class="phone_h">
-              <div class="phone_h--shadow"></div>
-              <div class="phone_h--body"></div>
-              <div class="phone_h--screen"></div>
-              <div class="phone--button phone_h--button"></div>
+          <div class="slider--content">
+            <div class="slide1">
+              <div class="slide--wrapper">
+                <div class="phone_v">
+                  <div class="phone_v--shadow"></div>
+                  <div class="phone_v--body"></div>
+                  <div class="phone_v--screen"></div>
+                  <div class="phone--button phone_v--button"></div>
+                </div>
+                <div class="phone_h">
+                  <div class="phone_h--shadow"></div>
+                  <div class="phone_h--body"></div>
+                  <div class="phone_h--screen"></div>
+                  <div class="phone--button phone_h--button"></div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="slider--slide2">
+          <div class="slide2 slide--hidden">
             <div class="phone_v">
               <div class="phone_v-body"></div>
               <div class="phone_v-screen"></div>
@@ -67,8 +70,7 @@
         </div>
         <div class="slider--stripe"></div>
       </article>
-      <article class="services--block ">
-        <a id="services"></a>
+      <article id="services" class="services--block ">
         <div class="services wrapper">
           <h2 class="services-title">Our Services</h2>
           <div class="services-text">
@@ -130,8 +132,7 @@
         </div>
         <div class="services--stripe"></div>
       </article>
-      <article class="portfolio wrapper">
-        <a id="portfolio"></a>
+      <article id="portfolio" class="portfolio wrapper">
         <div class="portfolio--padding">
           <div class="portfolio--title">Portfolio</div>
           <div class="portfolio--text">
@@ -177,8 +178,7 @@
         </div>
         <div class="portfolio--stripe"></div>
       </article>
-      <article class="about wrapper">
-        <a id="about"></a>
+      <article id="about" class="about wrapper">
         <div class="about--padding">
           <div class="about--title">About Us</div>
           <div class="about--text">
@@ -270,8 +270,7 @@
         </div>
         <div class="about--stripe"></div>
       </article>
-      <article class="getaquote wrapper">
-        <a id="contact"></a>
+      <article id="contact" class="getaquote wrapper">
         <div class="getaquote--padding">
           <div class="getaquote--title">Get a Quote</div>
           <div class="getaquote--text">
