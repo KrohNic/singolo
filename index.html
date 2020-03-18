@@ -6,110 +6,132 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="header">
-      <div class="header-logo">
-        <h1>
-          SINGOLO
-          <span class="header-logo-red_star">*</span>
-        </h1>
+    <header class="header--block">
+      <div class="header wrapper">
+        <div class="header-logo">
+          <h1>
+            SINGOLO
+            <span class="header-logo-red_star">*</span>
+          </h1>
+        </div>
+        <nav class="nav">
+          <ul>
+            <li class="nav_item">
+              <a class="nav_item--a nav_item--a-current" href="#home">HOME</a>
+            </li>
+            <li class="nav_item">
+              <a class="nav_item--a" href="#services">SERVICES</a>
+            </li>
+            <li class="nav_item">
+              <a class="nav_item--a" href="#portfolio">PORTFOLIO</a>
+            </li>
+            <li class="nav_item">
+              <a class="nav_item--a" href="#about">ABOUT</a>
+            </li>
+            <li class="nav_item">
+              <a class="nav_item--a" href="#contact">CONTACT</a>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <nav class="nav">
-        <ul>
-          <li class="nav_item">
-            <a class="nav_item_current-a" href="#">HOME</a>
-          </li>
-          <li class="nav_item">
-            <a class="nav_item-a" href="#">SERVICES</a>
-          </li>
-          <li class="nav_item">
-            <a class="nav_item-a" href="#">PORTFOLIO</a>
-          </li>
-          <li class="nav_item">
-            <a class="nav_item-a" href="#">ABOUT</a>
-          </li>
-          <li class="nav_item">
-            <a class="nav_item-a" href="#">CONTACT</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="header--stripe"></div>
     </header>
     <main>
-      <article class="slider">
-        <div class="slider-controls">
-          <div class="slider-controls-left"></div>
-          <div class="slider-controls-right"></div>
-        </div>
-        <div class="slider_content">
-          <div class="phone_v">
-            <div class="phone_v-body"></div>
-            <div class="phone_v-screen"></div>
+      <article class="slider--block">
+        <a id="home"></a>
+        <div class="slider  wrapper">
+          <div class="slider-controls">
+            <div class="slider-controls-left"></div>
+            <div class="slider-controls-right"></div>
           </div>
-          <div class="phone_h">
-            <div class="phone_h-body"></div>
-            <div class="phone_h-screen"></div>
+          <div class="slider--slide1 slider--active">
+            <div class="phone_v">
+              <div class="phone_v--shadow"></div>
+              <div class="phone_v--body"></div>
+              <div class="phone_v--screen"></div>
+              <div class="phone--button phone_v--button"></div>
+            </div>
+            <div class="phone_h">
+              <div class="phone_h--shadow"></div>
+              <div class="phone_h--body"></div>
+              <div class="phone_h--screen"></div>
+              <div class="phone--button phone_h--button"></div>
+            </div>
+          </div>
+          <div class="slider--slide2">
+            <div class="phone_v">
+              <div class="phone_v-body"></div>
+              <div class="phone_v-screen"></div>
+            </div>
           </div>
         </div>
+        <div class="slider--stripe"></div>
       </article>
-      <article class="services">
-        <h2 class="services-title">Our Services</h2>
-        <div class="services-text">
-          Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
-          Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget
-          lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo,
-          tortor mauris condimentum nibh.
+      <article class="services--block ">
+        <a id="services"></a>
+        <div class="services wrapper">
+          <h2 class="services-title">Our Services</h2>
+          <div class="services-text">
+            Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
+            Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget
+            lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo,
+            tortor mauris condimentum nibh.
+          </div>
+          <div class="services-badges">
+            <div class="badge">
+              <div class="badge-icon pen"></div>
+              <div class="badge-title">Custom Design</div>
+              <div class="badge-text">
+                Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam
+                laoreet, viverra lacus ut, ultrices velit.
+              </div>
+            </div>
+            <div class="badge">
+              <div class="badge-icon bulb"></div>
+              <div class="badge-title">Inovative Ideas</div>
+              <div class="badge-text">
+                Quisque luctus, quam eget molestie com-modo, lacus purus cursus
+                purus, nec rutrum tellus dolor id lorem.
+              </div>
+            </div>
+            <div class="badge">
+              <div class="badge-icon heart"></div>
+              <div class="badge-title">Love Is The Answer</div>
+              <div class="badge-text">
+                Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet
+                turpis, et consequat felis. Quisque condimentum.
+              </div>
+            </div>
+            <div class="badge">
+              <div class="badge-icon phone"></div>
+              <div class="badge-title">Responsive Layout</div>
+              <div class="badge-text">
+                Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas
+                blandit nunc ligula. Prae-sent elit leo.
+              </div>
+            </div>
+            <div class="badge">
+              <div class="badge-icon bubble"></div>
+              <div class="badge-title">24 / 7 Support</div>
+              <div class="badge-text">
+                Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi.
+                Nulla a sem erat. Pellen-tesque egestas venenatis lorem .
+              </div>
+            </div>
+            <div class="badge">
+              <div class="badge-icon star"></div>
+              <div class="badge-title">Feel Like A Star</div>
+              <div class="badge-text">
+                Quisque hendrerit purus dapibus, ornare nibh vitae, viverra
+                nibh. Fusce vitae aliquam tellus.
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="services-badges">
-          <div class="badge">
-            <div class="badge-icon pen"></div>
-            <div class="badge-title">Custom Design</div>
-            <div class="badge-text">
-              Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam
-              laoreet, viverra lacus ut, ultrices velit.
-            </div>
-          </div>
-          <div class="badge">
-            <div class="badge-icon bulb"></div>
-            <div class="badge-title">Inovative Ideas</div>
-            <div class="badge-text">
-              Quisque luctus, quam eget molestie com-modo, lacus purus cursus
-              purus, nec rutrum tellus dolor id lorem.
-            </div>
-          </div>
-          <div class="badge">
-            <div class="badge-icon heart"></div>
-            <div class="badge-title">Love Is The Answer</div>
-            <div class="badge-text">
-              Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis,
-              et consequat felis. Quisque condimentum.
-            </div>
-          </div>
-          <div class="badge">
-            <div class="badge-icon phone"></div>
-            <div class="badge-title">Responsive Layout</div>
-            <div class="badge-text">
-              Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas
-              blandit nunc ligula. Prae-sent elit leo.
-            </div>
-          </div>
-          <div class="badge">
-            <div class="badge-icon bubble"></div>
-            <div class="badge-title">24 / 7 Support</div>
-            <div class="badge-text">
-              Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla
-              a sem erat. Pellen-tesque egestas venenatis lorem .
-            </div>
-          </div>
-          <div class="badge">
-            <div class="badge-icon star"></div>
-            <div class="badge-title">Feel Like A Star</div>
-            <div class="badge-text">
-              Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh.
-              Fusce vitae aliquam tellus.
-            </div>
-          </div>
-        </div>
+        <div class="services--stripe"></div>
       </article>
       <article class="portfolio wrapper">
+        <a id="portfolio"></a>
         <div class="portfolio--padding">
           <div class="portfolio--title">Portfolio</div>
           <div class="portfolio--text">
@@ -139,23 +161,24 @@
             >
           </ul>
           <div class="images">
-            <div class="images_item image1"></div>
-            <div class="images_item image2"></div>
-            <div class="images_item image3"></div>
-            <div class="images_item image4"></div>
-            <div class="images_item image5"></div>
-            <div class="images_item image6"></div>
-            <div class="images_item image7"></div>
-            <div class="images_item image8"></div>
-            <div class="images_item image9"></div>
-            <div class="images_item image10"></div>
-            <div class="images_item image11"></div>
-            <div class="images_item image12"></div>
+            <div class="images--item image1" tabindex="0"></div>
+            <div class="images--item image2" tabindex="1"></div>
+            <div class="images--item image3" tabindex="2"></div>
+            <div class="images--item image4" tabindex="3"></div>
+            <div class="images--item image5" tabindex="4"></div>
+            <div class="images--item image6" tabindex="5"></div>
+            <div class="images--item image7" tabindex="6"></div>
+            <div class="images--item image8" tabindex="7"></div>
+            <div class="images--item image9" tabindex="8"></div>
+            <div class="images--item image10" tabindex="9"></div>
+            <div class="images--item image11" tabindex="10"></div>
+            <div class="images--item image12" tabindex="11"></div>
           </div>
         </div>
         <div class="portfolio--stripe"></div>
       </article>
       <article class="about wrapper">
+        <a id="about"></a>
         <div class="about--padding">
           <div class="about--title">About Us</div>
           <div class="about--text">
@@ -248,6 +271,7 @@
         <div class="about--stripe"></div>
       </article>
       <article class="getaquote wrapper">
+        <a id="contact"></a>
         <div class="getaquote--padding">
           <div class="getaquote--title">Get a Quote</div>
           <div class="getaquote--text">
@@ -332,5 +356,6 @@
         <a class="ico_border" href="#"><li class="linkedin_ico ico"></li></a>
       </ul>
     </footer>
+    <script src="./script.js"></script>
   </body>
 </html>
