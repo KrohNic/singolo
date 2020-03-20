@@ -113,6 +113,48 @@ class Slider {
   }
 }
 
+class Portfolio {
+  constructor() {
+    this.IMAGES = document.querySelector(".images");
+    this.MENU = document.querySelector(".portfolio--nav_ul");
+    this.MENU_ITEMS_LIST = document.querySelector(
+      ".portfolio--nav_ul"
+    ).children;
+
+    for (let i = 0; i < this.MENU_ITEMS_LIST.length; ++i) {
+      this.MENU_ITEMS_LIST[i].addEventListener("click", e =>
+        this.navClickListener(this.MENU_ITEMS_LIST[i], i)
+      );
+    }
+  }
+
+  navClickListener(navItem, index) {
+    if (navItem.classList.contains("portfolio--nav_li-active")) return;
+
+    this.deactivateMenuItems();
+
+    navItem.classList.add("portfolio--nav_li-active");
+    navItem.classList.remove("portfolio--nav_li");
+
+    this.shuffleImages(index);
+  }
+
+  deactivateMenuItems() {
+    for (let i = 0; i < this.MENU_ITEMS_LIST.length; ++i) {
+      this.MENU_ITEMS_LIST[i].classList.remove("portfolio--nav_li-active");
+      this.MENU_ITEMS_LIST[i].classList.add("portfolio--nav_li");
+    }
+  }
+
+  shuffleImages(index) {
+    for (let i = 0; i < this.IMAGES.children.length; ++i) {
+      this.IMAGES.append(
+        this.IMAGES.children[(i + index) % this.IMAGES.children.length]
+      );
+    }
+  }
+}
+
 document.querySelectorAll(".phone--button").forEach(phoneBtn => {
   phoneBtn.addEventListener("click", event => {
     event.target.previousElementSibling.classList.toggle("phone--screen-off");
@@ -121,3 +163,4 @@ document.querySelectorAll(".phone--button").forEach(phoneBtn => {
 
 new NavMenu();
 new Slider();
+new Portfolio();

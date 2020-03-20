@@ -521,6 +521,7 @@
   font-size: 12px;
   line-height: 20px;
   font-family: "Lato-Regular", Arial, sans-serif;
+  user-select: none;
 }
 
 .portfolio--nav_li:hover {
