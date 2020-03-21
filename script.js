@@ -155,6 +155,65 @@ class Portfolio {
   }
 }
 
+class Contact {
+  constructor() {
+    this.FORM = document.querySelector(".getaquote--form");
+
+    this.FORM.addEventListener("submit", e => this.formSubmit(event));
+  }
+
+  formSubmit(event) {
+    event.preventDefault();
+
+    let subject = this.FORM.querySelector("#subject").value;
+
+    if (subject.length) subject = `Subject: ${subject}`;
+    else subject = "No subject";
+
+    let descr = this.FORM.querySelector("#description").value;
+
+    if (descr.length) descr = `Description: ${descr}`;
+    else descr = "No description";
+
+    this.makeModalWindow("The letter was sent", subject, descr);
+
+    return false;
+  }
+
+  makeModalWindow(title, ...rest) {
+    const bg = document.createElement("DIV");
+    bg.classList.add("modal--background");
+
+    const modalWindow = document.createElement("DIV");
+    modalWindow.classList.add("modal");
+
+    const closeBtn = document.createElement("BUTTON");
+    closeBtn.classList.add("modal--close_btn");
+    closeBtn.innerText = "OK";
+    closeBtn.addEventListener("click", () => {
+      this.FORM.reset();
+      document.querySelector(".modal--background").remove();
+    });
+
+    const titleElem = document.createElement("H3");
+    titleElem.classList.add("modal--title");
+    titleElem.innerText = title;
+
+    bg.appendChild(modalWindow);
+    modalWindow.appendChild(titleElem);
+
+    rest.forEach(item => {
+      const temp = document.createElement("div");
+      temp.classList.add("modal--text");
+      temp.innerText = item;
+      modalWindow.appendChild(temp);
+    });
+
+    modalWindow.appendChild(closeBtn);
+    document.body.appendChild(bg);
+  }
+}
+
 document.querySelectorAll(".phone--button").forEach(phoneBtn => {
   phoneBtn.addEventListener("click", event => {
     event.target.previousElementSibling.classList.toggle("phone--screen-off");
@@ -164,3 +223,4 @@ document.querySelectorAll(".phone--button").forEach(phoneBtn => {
 new NavMenu();
 new Slider();
 new Portfolio();
+new Contact();
