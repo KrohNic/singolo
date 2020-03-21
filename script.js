@@ -71,6 +71,14 @@ class Slider {
       this.SLIDES_LIST[i].addEventListener("animationend", () =>
         this.animationEndListener(i)
       );
+
+    document.querySelectorAll(".phone--button").forEach(phoneBtn => {
+      phoneBtn.addEventListener("click", event => {
+        event.target.previousElementSibling.classList.toggle(
+          "phone--screen-off"
+        );
+      });
+    });
   }
 
   animationEndListener(i) {
@@ -126,6 +134,20 @@ class Portfolio {
         this.navClickListener(this.MENU_ITEMS_LIST[i], i)
       );
     }
+
+    this.IMAGES.addEventListener("click", event => {
+      this.selectImage(event.target);
+    });
+  }
+
+  selectImage(elem) {
+    if (!elem.classList.contains("images--item")) return;
+
+    for (let i = 0; i < this.IMAGES.children.length; ++i) {
+      this.IMAGES.children[i].classList.remove("images--item-selected");
+    }
+
+    elem.classList.add("images--item-selected");
   }
 
   navClickListener(navItem, index) {
@@ -213,12 +235,6 @@ class Contact {
     document.body.appendChild(bg);
   }
 }
-
-document.querySelectorAll(".phone--button").forEach(phoneBtn => {
-  phoneBtn.addEventListener("click", event => {
-    event.target.previousElementSibling.classList.toggle("phone--screen-off");
-  });
-});
 
 new NavMenu();
 new Slider();

@@ -557,7 +557,7 @@
   background-position: -1px -1px;
 }
 
-.images--item:focus {
+.images--item-selected {
   outline: 5px solid #f06c64;
 }
 
