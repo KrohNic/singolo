@@ -145,7 +145,7 @@
 .slider-controls-left,
 .slider-controls-right {
   width: 98px;
-  background-image: url("./assets/left-slide.svg");
+  background-image: url("./assets/slider/left-slide.svg");
   background-repeat: no-repeat;
   background-position-x: calc(50% + 1px);
   background-position-y: calc(50% - 6px);
@@ -153,7 +153,7 @@
 }
 
 .slider-controls-right {
-  background-image: url("./assets/right-slide.svg");
+  background-image: url("./assets/slider/right-slide.svg");
 }
 
 .slider--content {
@@ -446,29 +446,29 @@
 }
 
 .pen {
-  background-image: url("./assets/pen.svg");
+  background-image: url("./assets/services/pen.svg");
   background-position: calc(50% + 1px) calc(50% + 1px);
 }
 
 .bulb {
-  background-image: url("./assets/bulb.svg");
+  background-image: url("./assets/services/bulb.svg");
 }
 
 .heart {
-  background-image: url("./assets/heart.svg");
+  background-image: url("./assets/services/heart.svg");
 }
 
 .phone {
-  background-image: url("./assets/phone.svg");
+  background-image: url("./assets/services/phone.svg");
 }
 
 .bubble {
-  background-image: url("./assets/bubble.svg");
+  background-image: url("./assets/services/bubble.svg");
   background-position: calc(50% + 1px) calc(50% + 1px);
 }
 
 .star {
-  background-image: url("./assets/star.svg");
+  background-image: url("./assets/services/star.svg");
 }
 
 .services--stripe {
