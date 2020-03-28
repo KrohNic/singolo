@@ -234,13 +234,33 @@ class Contact {
   }
 }
 
+class BurgerMenu {
+  constructor() {
+    this.MENU_BURGER = document.querySelector(".nav--burger");
+    this.NAV = document.querySelector(".nav");
+    this.NAV_LOGO = document.querySelector(".nav--logo");
+    this.NAV_MOBILE = document.querySelector(".nav--mobile");
+
+    this.MENU_BURGER.addEventListener("click", e => this.toggleView());
+    document.body.addEventListener("click", e => this.onBlur(e));
+  }
+
+  toggleView() {
+    this.MENU_BURGER.classList.toggle("nav--burger-active");
+    this.NAV_LOGO.classList.toggle("display_block");
+    this.NAV.classList.toggle("display_block");
+  }
+
+  onBlur(event) {
+    if (event.path.includes(this.NAV) || event.path.includes(this.NAV_MOBILE))
+      if (!event.target.classList.contains("nav_item")) return;
+
+    this.toggleView();
+  }
+}
+
 new NavMenu();
 new Slider();
 new Portfolio();
 new Contact();
-
-document.querySelector(".nav--burger").addEventListener("click", event => {
-  document.querySelector(".nav--burger").classList.toggle("nav--burger-active");
-  document.querySelector(".nav--logo").classList.toggle("display_block");
-  document.querySelector(".nav").classList.toggle("display_block");
-});
+new BurgerMenu();
