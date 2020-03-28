@@ -458,8 +458,8 @@
 }
 
 .services-badges {
-  margin-top: 45px;
-  margin-left: 1px;
+  width: 100%;
+  margin: 45px 0 0 1px;
   display: grid;
   grid-template-columns: repeat(3, 303px);
   grid-column-gap: 16px;
@@ -1024,17 +1024,20 @@
   background-image: url("./assets/social_media/linkedin.png");
 }
 
+.slider,
+/* .services, */
+.portfolio,
+.about,
+.getaquote {
+  display: none;
+}
+
 @media screen and (max-width: 1019px) {
   .wrapper {
     width: 100%;
   }
 
-  .services,
-  .portfolio,
-  .about,
-  .getaquote {
-    display: none;
-  }
+  /* .slider */
 
   .slider {
     height: 58.8vw;
@@ -1114,8 +1117,6 @@
     left: -52%;
   }
 
-  /* slide2 */
-
   .slide2--phone1,
   .slide2--phone3 {
     width: 18.94%;
@@ -1126,6 +1127,21 @@
     width: 30.95%;
     height: 85.5%;
     margin: 0 -3.16% 0 -1.95%;
+  }
+
+  /* .services */
+
+  .services--content {
+    padding: 48px 40px 50px;
+  }
+  .services--stripe {
+    display: none;
+  }
+
+  .services-badges {
+    grid-template-columns: repeat(2, 303px);
+    grid-row-gap: 51px;
+    grid-column-gap: calc(100% - 635px);
   }
 }
 
@@ -1173,6 +1189,19 @@
   .nav_item::before {
     content: none;
   }
+
+  /* .services */
+
+  .services--content {
+    padding: 34px 32px 28px;
+  }
+
+  .services-badges {
+    margin-left: -4px;
+    grid-template-columns: repeat(1, auto);
+    grid-row-gap: 27px;
+    justify-content: center;
+  }
 }
 
 @media screen and (max-width: 374px) {
@@ -1187,11 +1216,16 @@
 
   .wrapper,
   .header,
-  .slider {
+  .slider,
+  .services {
     min-width: 320px;
   }
 
   .slider {
     min-height: 188.156px;
+  }
+
+  .badge {
+    grid-template-columns: 59px auto;
   }
 }
