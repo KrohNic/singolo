@@ -95,8 +95,6 @@ class Slider {
   nextSlide(rightDirection) {
     if (this.isSliderRunning) return;
 
-    console.log("slide", this);
-
     this.isSliderRunning = true;
 
     let nextIndex;
