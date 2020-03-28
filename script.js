@@ -213,6 +213,7 @@ class Contact {
     closeBtn.addEventListener("click", () => {
       this.FORM.reset();
       document.querySelector(".modal--background").remove();
+      document.body.classList.remove("overflow-hidden");
     });
 
     const titleElem = document.createElement("H3");
@@ -231,6 +232,8 @@ class Contact {
 
     modalWindow.appendChild(closeBtn);
     document.body.appendChild(bg);
+
+    document.body.classList.add("overflow-hidden");
   }
 }
 
@@ -251,11 +254,17 @@ class BurgerMenu {
     this.NAV.classList.toggle("display_block");
   }
 
+  hideView() {
+    this.MENU_BURGER.classList.remove("nav--burger-active");
+    this.NAV_LOGO.classList.remove("display_block");
+    this.NAV.classList.remove("display_block");
+  }
+
   onBlur(event) {
     if (event.path.includes(this.NAV) || event.path.includes(this.NAV_MOBILE))
       if (!event.target.classList.contains("nav_item")) return;
 
-    this.toggleView();
+    this.hideView();
   }
 }
 
