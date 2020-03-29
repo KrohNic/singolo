@@ -602,11 +602,6 @@
 
 .images {
   height: 622px;
-  /* margin-top: 14px; */
-  /* display: flex; */
-  /* flex-flow: row wrap; */
-  /* justify-content: space-between; */
-  /* height: calc(2 * 20px + 3 * 0.85 * 220px); */
   padding: 19px 5px 0 5px;
   display: grid;
   grid-template-columns: repeat(4, 220px);
@@ -685,12 +680,13 @@
 }
 
 .about {
-  height: 734px;
+  width: 100%;
   background-color: #f2f2f2;
 }
 
-.about--padding {
-  padding: 66px 40px;
+.about--content {
+  padding: 66px 40px 67px;
+  box-sizing: border-box;
 }
 
 .about--title {
@@ -712,13 +708,13 @@
 
 .profiles {
   margin-top: 45px;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 31.95%);
+  grid-column-gap: 2.1%;
 }
 
 .profile--img {
-  width: 300px;
-  height: 300px;
+  width: 100%;
 }
 
 .profile--second_img {
@@ -726,7 +722,6 @@
 }
 
 .profile--name {
-  width: 300px;
   margin-top: 13px;
   margin-left: -1px;
   line-height: 18px;
@@ -739,7 +734,6 @@
 }
 
 .profile--description {
-  width: 300.6px;
   margin-top: 10px;
   margin-left: -1px;
   line-height: 21.9px;
@@ -1033,8 +1027,8 @@
 
 .slider,
 .services,
-/* .portfolio, */
-.about,
+.portfolio,
+/* .about, */
 .getaquote {
   display: none;
 }
@@ -1163,6 +1157,16 @@
   .portfolio--stripe {
     height: 7.6px;
   }
+
+  /* .about */
+
+  .about--content {
+    padding: 61px 40px 75px;
+  }
+
+  .about--stripe {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -1241,6 +1245,17 @@
   .portfolio--stripe {
     display: none;
   }
+
+  /* .about */
+
+  .about--content {
+    padding: 42px 30px 45px;
+  }
+
+  .profiles {
+    grid-template-columns: repeat(1, 100%);
+    grid-row-gap: 34px;
+  }
 }
 
 @media screen and (max-width: 374px) {
@@ -1257,7 +1272,8 @@
   .header,
   .slider,
   .services,
-  .portfolio {
+  .portfolio,
+  .about {
     min-width: 320px;
   }
 
