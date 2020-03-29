@@ -6,15 +6,23 @@ class NavMenu {
     this.NAV_ITEMS_LIST = document.querySelectorAll(".nav_item");
     this.offsetBottomList = [];
 
-    this.ARTICLES.forEach(item => {
-      this.offsetBottomList.push(item.offsetTop + item.offsetHeight);
-    });
+    this.initOffsetBottomList();
 
     this.NAV_ITEMS_LIST.forEach((navItem, i) => {
-      navItem.addEventListener("click", e => this.highlightNavByClick(i));
+      navItem.addEventListener("click", e => this.highlightNavByClick(e, i));
     });
 
     window.addEventListener("scroll", e => this.highlightNavByScroll(e));
+
+    window.addEventListener("resize", () => this.initOffsetBottomList());
+  }
+
+  initOffsetBottomList() {
+    this.offsetBottomList = [];
+
+    this.ARTICLES.forEach(item => {
+      this.offsetBottomList.push(item.offsetTop + item.offsetHeight);
+    });
   }
 
   deactivateNavItems() {
@@ -23,7 +31,7 @@ class NavMenu {
     });
   }
 
-  highlightNavByClick(i) {
+  highlightNavByClick(event, i) {
     if (event.target.tagName !== "LI") return;
     if (event.target.classList.contains("nav_item--current")) return;
 
@@ -38,14 +46,13 @@ class NavMenu {
   }
 
   highlightNavByScroll(event) {
-    for (let i = 0; i < this.offsetBottomList.length; ++i) {
-      if (this.isOnScreenMiddle(i)) {
-        this.deactivateNavItems();
+    const index = this.offsetBottomList.findIndex((e, i) =>
+      this.isOnScreenMiddle(i)
+    );
+    if (index === -1) return;
 
-        this.NAV_ITEMS_LIST[i].classList.add("nav_item--current");
-        break;
-      }
-    }
+    this.deactivateNavItems();
+    this.NAV_ITEMS_LIST[index].classList.add("nav_item--current");
   }
 }
 
