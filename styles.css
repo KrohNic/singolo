@@ -542,7 +542,7 @@
 }
 
 .portfolio--content {
-  padding: 68px 35px 51px;
+  padding: 68px 35px 46px;
   box-sizing: border-box;
 }
 
@@ -959,8 +959,12 @@
 }
 
 .footer {
-  padding: 22px 32px 22px 42px;
   background-color: #2d303a;
+}
+
+.footer--content {
+  padding: 22px 32px 22px 42px;
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
@@ -980,6 +984,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 0;
   list-style-type: none;
 }
 
@@ -1023,15 +1028,6 @@
 
 .linkedin_ico {
   background-image: url("./assets/social_media/linkedin.png");
-}
-
-.slider,
-.services,
-.portfolio,
-.about
-/* .getaquote */
- {
-  display: none;
 }
 
 @media screen and (max-width: 1019px) {
@@ -1285,9 +1281,18 @@
   }
 
   .getaquote--twocol {
-    /* margin-top: 22px; */
     grid-template-columns: 1fr;
     grid-row-gap: 32px;
+  }
+
+  /* .footer */
+
+  .footer--copyright {
+    display: none;
+  }
+
+  .footer--content {
+    justify-content: center;
   }
 }
 
@@ -1307,7 +1312,8 @@
   .services,
   .portfolio,
   .about,
-  .getaquote {
+  .getaquote,
+  .footer {
     min-width: 320px;
   }
 
