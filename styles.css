@@ -171,11 +171,11 @@
 }
 
 .nav_item:hover {
-  color: #f06c64;
+  color: #3b92bb;
 }
 
 .nav_item--current {
-  color: #f06c64;
+  color: #f06c64 !important;
   cursor: default;
 }
 
